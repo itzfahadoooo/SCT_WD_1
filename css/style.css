@@ -18,9 +18,14 @@ a {
   cursor: pointer;
 }
 
+.container{
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
 nav {
   width: 100%;
-  background: #333;
+  /* background: #333; */
   color: #fff;
   padding: 5px 180px;
   position: fixed;
@@ -42,7 +47,7 @@ nav ul li {
 .btn {
   background: #fff;
   color: #212121;
-  padding: 14px 25px;
+  padding: 11px 25px;
   font-size: 16px;
   border-radius: 30px;
   cursor: pointer;
@@ -53,9 +58,16 @@ nav ul li {
   justify-content: center;
 }
 
+.btn img{
+    width: 20px;
+    margin-left: 10px; 
+  }
+
 .menu-icon {
   display: none;
 }
+
+
 
 /* media query */
 @media (max-width: 1000px) {
@@ -92,3 +104,53 @@ nav ul li {
     right: -200px;
   }
 }
+
+/* Hero */
+.hero {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(8, 0, 58, 0.7), rgba(8, 0, 58, 0.7)),
+      url(../../assets/hero.png);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-text{
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .hero-text h1{
+    font-size: 60px;
+    font-weight: 600;
+  }
+  
+  .hero-text p{
+    max-width: 700px;
+    margin: 10px auto 20px;
+    line-height: 1.4;
+  }
+  
+  /* media query */
+  @media (max-width: 850px){
+    .hero-text h1{
+      font-size: 40px;
+    }
+  }
+  
+  @media (max-width: 650px){
+    .hero-text h1{
+      font-size: 30px;
+      max-width: 400px;
+      margin: auto;
+    }
+  
+    .hero-text p{
+      font-size: 14px;
+      margin: 15px auto 30px;
+    }
+  }
