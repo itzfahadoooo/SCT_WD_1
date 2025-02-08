@@ -31,9 +31,9 @@ a {
 
 nav {
   width: 100%;
-  background: #333;
+  /* background: #333; */
   color: #fff;
-  padding: 5px 180px;
+  padding: 5px 150px;
   position: fixed;
   top: 0;
   left: 0;
@@ -53,11 +53,8 @@ nav {
 .nav-about {
   background-color: rgba(34, 193, 195, 0.8);
 }
-.nav-campus {
-  background-color: rgba(255, 87, 34, 0.8);
-}
 .nav-testimonial {
-  background-color: rgba(123, 31, 162, 0.8);
+    background-color: rgba(255, 87, 34, 0.8);
 }
 .nav-contact {
   background-color: rgba(0, 150, 136, 0.8);
@@ -93,9 +90,11 @@ nav ul li {
 .menu-icon {
   display: none;
 }
-
 /* media query */
 @media (max-width: 1000px) {
+    nav{
+        padding: 5px 50px;
+    }
   nav ul li {
     margin: 10px 15px;
   }
@@ -106,10 +105,6 @@ nav ul li {
     padding: 15px 0;
   }
   nav ul {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
     background: #212ea0;
     z-index: -1;
     width: 200px;
@@ -119,15 +114,46 @@ nav ul li {
   nav ul li {
     display: block;
     margin: 25px 40px;
+
   }
+
+  .btn{
+    padding: 11px 10px;
+}
+   
+  /* Hide Navbar Links by Default on Mobile */
+#nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: rgba(8, 0, 58, 0.9);
+    width: 200px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  #nav-links.active {
+    display: flex;
+  }
+  
+  /* Menu Icon */
   .menu-icon {
-    display: block;
-    width: 30px;
+    display: none;
+    width: 40px;
     cursor: pointer;
   }
-  .hide-mobile-menu {
-    right: -200px;
+
+  #nav-links {
+    display: none; /* Hide by default */
   }
+
+  .menu-icon {
+    display: block; /* Show menu icon */
+  }
+   
 }
 
 /* Hero */

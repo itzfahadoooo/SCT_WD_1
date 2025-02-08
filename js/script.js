@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
     const navbar = document.getElementById("navbar");
+    const menuIcon = document.getElementById("menu-icon");
+  const navLinks = document.getElementById("nav-links");
   
     window.addEventListener("scroll", () => {
       let scrollPos = window.scrollY;
@@ -16,5 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+
+    menuIcon.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+      });
+    
+      // Close menu when clicking a link (optional)
+      document.querySelectorAll("#nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+        });
+      });
   });
   
